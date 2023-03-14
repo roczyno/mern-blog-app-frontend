@@ -36,7 +36,10 @@ export default function Settings() {
       } catch (err) {}
     }
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axios.put(
+        "https://blogallday-api.onrender.com/api/users/" + user._id,
+        updatedUser
+      );
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
       setSuccess(true);
     } catch (err) {

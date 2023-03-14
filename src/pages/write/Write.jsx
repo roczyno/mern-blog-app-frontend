@@ -32,7 +32,10 @@ export default function Write() {
       } catch (err) {}
     }
     try {
-      const res = await axios.post("/posts", newPost);
+      const res = await axios.post(
+        "https://blogallday-api.onrender.com/api/posts",
+        newPost
+      );
       navigate("/post/" + res.data._id);
     } catch (err) {}
   };

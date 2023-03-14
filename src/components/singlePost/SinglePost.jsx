@@ -38,11 +38,14 @@ export default function SinglePost() {
   };
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
-        username: user.username,
-        title,
-        desc,
-      });
+      await axios.put(
+        `https://blogallday-api.onrender.com/api/posts/${post._id}`,
+        {
+          username: user.username,
+          title,
+          desc,
+        }
+      );
       updatemode(false);
     } catch (error) {
       console.log(error);

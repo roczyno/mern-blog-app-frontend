@@ -14,11 +14,14 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("/auth/register", {
-        username,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://blogallday-api.onrender.com/api/auth/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
       res.data && navigate("/login");
     } catch (error) {
       console.log(error);

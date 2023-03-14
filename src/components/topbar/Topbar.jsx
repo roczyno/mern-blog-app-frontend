@@ -7,7 +7,7 @@ const user = true;
 export default function Topbar() {
   const { user, dispatch } = useContext(UserContext);
   const navigate = useNavigate();
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://blogallday-api.onrender.com/images/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
